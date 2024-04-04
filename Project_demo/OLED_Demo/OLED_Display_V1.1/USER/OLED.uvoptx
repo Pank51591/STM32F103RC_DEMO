@@ -159,7 +159,7 @@
           <Type>0</Type>
           <LineNumber>166</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134221112</Address>
+          <Address>134220864</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -169,6 +169,70 @@
           <Filename>..\SYSTEM\usart\usart.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\OLED\../SYSTEM/usart/usart.c\166</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>164</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134221348</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\SYSTEM\key\bsp_key.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\OLED\../SYSTEM/key/bsp_key.c\164</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>160</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134221336</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\SYSTEM\key\bsp_key.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\OLED\../SYSTEM/key/bsp_key.c\160</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>74</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134220994</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\SYSTEM\key\bsp_key.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\OLED\../SYSTEM/key/bsp_key.c\74</Expression>
+        </Bp>
+        <Bp>
+          <Number>4</Number>
+          <Type>0</Type>
+          <LineNumber>83</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134221030</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\SYSTEM\key\bsp_key.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\OLED\../SYSTEM/key/bsp_key.c\83</Expression>
         </Bp>
       </Breakpoint>
       <Tracepoint>

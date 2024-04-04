@@ -17,12 +17,10 @@
 //All rights reserved
 //////////////////////////////////////////////////////////////////////////////////
 
-#include "delay.h"
-#include "sys.h"
-#include "oled.h"
 #include "bmp.h"
-#include "usart.h"
-#include "bsp_key.h"
+#include "config.h"
+
+struct Flag_Class MyFlag;
 
  int main(void)
  {	
@@ -30,7 +28,7 @@
 		delay_init();	    	   //延时函数初始化	  
 		NVIC_Configuration();  //设置NVIC中断分组2:2位抢占优先级，2位响应优先级 	
     //LED_Init();			     //LED端口初始化
-	  KEY_Init();
+	  Key_Init();
 	  uart_init(115200);
 		OLED_Init();			 //初始化OLED  
 		OLED_Clear(); 
@@ -40,28 +38,33 @@
 		
 	while(1) 
 	{		
-		OLED_ShowCHinese(0,0,0); //电
-		OLED_ShowCHinese(18,0,1);//子
-		OLED_ShowCHinese(36,0,2);//科
-		OLED_ShowCHinese(54,0,3);//技
-		OLED_ShowCHinese(72,0,4);//专
-		OLED_ShowCHinese(90,0,5);//业
-//		OLED_ShowCHinese(108,0,6);//技
 		
-//		OLED_ShowString(6,3,"0.96' OLED TEST",16);
-		OLED_ShowString(8,2," pan ke' Test ",16);  
-	  OLED_ShowString(20,4,"2024/04/04",16);  
-		OLED_ShowString(0,6,"ASCII:",16);  
-		OLED_ShowString(63,6,"CODE:",16);  
-		OLED_ShowChar(48,6,t,16);    //显示ASCII字符	
+		Key_Process();
 		
-		t++;    //将字符的ascll码往后移
-		if(t>'~')t=' ';
-		OLED_ShowNum(103,6,t,3,16);    //显示ASCII字符的码值 	
-    printf("ASCII：%c, Code = %d\r\n", t, t);    //通过串口1进行打印
-		delay_ms(8000);
-		delay_ms(8000);
-		
+//		OLED_ShowCHinese(0,0,0); //电
+//		OLED_ShowCHinese(18,0,1);//子
+//		OLED_ShowCHinese(36,0,2);//科
+//		OLED_ShowCHinese(54,0,3);//技
+//		OLED_ShowCHinese(72,0,4);//专
+//		OLED_ShowCHinese(90,0,5);//业
+//    //OLED_ShowCHinese(108,0,6);//技
+//		
+//    //OLED_ShowString(6,3,"0.96' OLED TEST",16);
+//		OLED_ShowString(8,2," pan ke' Test ",16);  
+//	  OLED_ShowString(20,4,"2024/04/04",16);  
+//		OLED_ShowString(0,6,"ASCII:",16);  
+//		OLED_ShowString(63,6,"CODE:",16);  
+//		OLED_ShowChar(48,6,t,16);    //显示ASCII字符	
+//		
+//		t++;    //将字符的ascll码往后移
+//		if(t>'~')t=' ';
+//		OLED_ShowNum(103,6,t,3,16);    //显示ASCII字符的码值 	
+////    printf("ASCII：%c, Code = %d\r\n", t, t);    //通过串口1进行打印
+//		delay_ms(8000);
+//		delay_ms(8000);
+	
+
+delay_ms(50);
 		
 		#if 0    //显示图片
 			delay_ms(8000);
