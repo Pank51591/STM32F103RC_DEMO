@@ -23,8 +23,12 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h" 
+#include "bsp_timer.h"
+#include "bsp_SysTick.h"
+#include "bsp_key.h"
 
-
+extern uint32_t gi1msCount;
+extern uint8_t gc10mscount;
  
 void NMI_Handler(void)
 {
@@ -75,9 +79,35 @@ void PendSV_Handler(void)
 {
 }
  
+
+#if 1
+void  BASIC_TIM_IRQHandler (void)
+{
+	if ( TIM_GetITStatus( BASIC_TIM, TIM_IT_Update) != RESET ) 
+	{	
+		Key_Check();
+		gc10mscount++;
+		gi1msCount++;
+		TIM_ClearITPendingBit(BASIC_TIM , TIM_FLAG_Update);  		 
+	}		 	
+}
+#endif
+
+/**
+  * @brief  This function handles SysTick Handler.
+  * @param  None
+  * @retval None   (1ms/´Î)
+  */
+#if 0
 void SysTick_Handler(void)
 {
+//	 TimingDelay_Decrement();
+	
+	Key_Check();
+	gc10mscount++;
 }
+#endif
+
 
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */

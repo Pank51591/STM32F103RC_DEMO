@@ -58,7 +58,7 @@
           <ListingPath>.\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
-          <CreateBatchFile>0</CreateBatchFile>
+          <CreateBatchFile>1</CreateBatchFile>
           <BeforeCompile>
             <RunUserProg1>0</RunUserProg1>
             <RunUserProg2>0</RunUserProg2>
@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\OLED;..\SYSTEM\key;..\SYSTEM\led;..\SYSTEM</IncludePath>
+              <IncludePath>..\HARDWARE\LED;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\HARDWARE\OLED;..\SYSTEM\key;..\SYSTEM\led;..\SYSTEM;..\SYSTEM\Timer;..\SYSTEM\SysTick</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -432,6 +432,16 @@
               <FileType>1</FileType>
               <FilePath>..\SYSTEM\key\bsp_key.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\Timer\bsp_timer.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_SysTick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\SYSTEM\SysTick\bsp_SysTick.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -471,6 +481,11 @@
               <FileName>stm32f10x_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\STM32F10x_FWLib\src\stm32f10x_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_FWLib\src\stm32f10x_tim.c</FilePath>
             </File>
           </Files>
         </Group>

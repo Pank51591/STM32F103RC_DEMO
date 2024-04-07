@@ -39,9 +39,8 @@ uint8_t Key_Scan(GPIO_TypeDef* GPIOx,uint16_t GPIO_Pin);
 
 
 void Key_Init(void);
-uint8_t Key_Check(void);
+void Key_Check(void);
 void Key_Process(void);
-
 void Time_Set(void);
 
 

@@ -62,7 +62,7 @@ void Get_Key_Value(void)
 #endif
 
 /*按键扫描（可以放到定时器中断里）*/
-uint8_t Key_Check(void)
+void Key_Check(void)
 {
 	if(Key1_Read == 1)    //按键1没有按下
 	{
@@ -78,7 +78,7 @@ uint8_t Key_Check(void)
 	else if(gcKeyLock1 == 0)     //用else if隐含的是 Key1_Read = 0
 	{
 		giKey1Count++;
-		if(giKey1Count > 2)
+		if(giKey1Count > 20)
 		{
 			Set_Key1Down_Flag;      //激活短按有效的标志
 		}
@@ -106,7 +106,7 @@ uint8_t Key_Check(void)
 	else if(gcKeyLock2 == 0)     //用else if隐含的是 Key1_Read = 0
 	{
 		giKey2Count++;
-		if(giKey2Count > 2)
+		if(giKey2Count > 20)
 		{
 			Set_Key2Down_Flag;      //激活短按有效的标志
 		}
@@ -134,26 +134,26 @@ uint8_t Key_Check(void)
 	else if (gcKeyLock1_2 == 0)
 	{
 		giKey1_2Count++;
-		if(giKey1_2Count > 2)
+		if(giKey1_2Count > 20)
 		{
 			Set_Key1_2Down_Flag;
 //			gcKeyValue = Keycom1;
 		}
 	}
 	
-	if(KeyReturn_Flag)
-	{
-		Clr_KeyReturn_flag;
-		return gcKeyValue;
-	}
-	else
-		return 0;
+//	if(KeyReturn_Flag)
+//	{
+//		Clr_KeyReturn_flag;
+//		return gcKeyValue;
+//	}
+//	else
+//		return 0;
 	
 }
 
 void Key_Process(void)
 {
-	switch(Key_Check())
+	switch(gcKeyValue)
 	{
 		case Key1 :
 		{	

@@ -7,12 +7,15 @@
 "..\obj\sys.o"
 "..\obj\usart.o"
 "..\obj\bsp_key.o"
+"..\obj\bsp_timer.o"
+"..\obj\bsp_systick.o"
 "..\obj\core_cm3.o"
 "..\obj\startup_stm32f10x_hd.o"
 "..\obj\misc.o"
 "..\obj\stm32f10x_gpio.o"
 "..\obj\stm32f10x_rcc.o"
 "..\obj\stm32f10x_usart.o"
+"..\obj\stm32f10x_tim.o"
 --strict --scatter "..\OBJ\OLED.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

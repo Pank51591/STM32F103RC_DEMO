@@ -9,12 +9,15 @@
 ..\obj\bsp_key.o: ..\USER\stm32f10x.h
 ..\obj\bsp_key.o: ..\STM32F10x_FWLib\inc\stm32f10x_gpio.h
 ..\obj\bsp_key.o: ..\STM32F10x_FWLib\inc\stm32f10x_rcc.h
+..\obj\bsp_key.o: ..\STM32F10x_FWLib\inc\stm32f10x_tim.h
 ..\obj\bsp_key.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\bsp_key.o: ..\STM32F10x_FWLib\inc\misc.h
 ..\obj\bsp_key.o: ..\SYSTEM\delay\delay.h
 ..\obj\bsp_key.o: ..\SYSTEM\sys\sys.h
 ..\obj\bsp_key.o: ..\HARDWARE\OLED\oled.h
 ..\obj\bsp_key.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\bsp_key.o: ..\SYSTEM\Timer\bsp_timer.h
 ..\obj\bsp_key.o: ..\SYSTEM\usart\usart.h
 ..\obj\bsp_key.o: D:\Program Files\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\bsp_key.o: ..\SYSTEM\key\bsp_key.h
+..\obj\bsp_key.o: ..\SYSTEM\SysTick\bsp_SysTick.h
