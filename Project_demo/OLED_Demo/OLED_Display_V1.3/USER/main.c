@@ -72,25 +72,26 @@ char cStr [ 100 ] = { 0 };
 			if(gc1sCount >= 100)  //1s更新一次
 			{
 				gc1sCount = 0;
-////				OLED_ShowCHinese(0,0,0); //电
-////				OLED_ShowCHinese(18,0,1);//子
-////				OLED_ShowCHinese(36,0,2);//科
-////				OLED_ShowCHinese(54,0,3);//技
-////				OLED_ShowCHinese(72,0,4);//专
-////				OLED_ShowCHinese(90,0,5);//业
-////				//OLED_ShowCHinese(108,0,6);//技
-////				
-////				//OLED_ShowString(6,3,"0.96' OLED TEST",16);
-////				OLED_ShowString(8,2," pan ke' Test ",16);  
-////				OLED_ShowString(20,4,"2024/04/04",16);  
-////				OLED_ShowString(0,6,"ASCII:",16);  
-////				OLED_ShowString(63,6,"CODE:",16);  
-////				OLED_ShowChar(48,6,t,16);    //显示ASCII字符	
-////				
-////				t++;    //将字符的ascll码往后移
-////				if(t>'~')t=' ';
-////				OLED_ShowNum(103,6,t,3,16);    //显示ASCII字符的码值 	
-////		    //printf("ASCII：%c, Code = %d\r\n", t, t);    //通过串口1进行打印
+				
+				OLED_ShowCHinese(0,0,0); //电
+				OLED_ShowCHinese(18,0,1);//子
+				OLED_ShowCHinese(36,0,2);//科
+				OLED_ShowCHinese(54,0,3);//技
+				OLED_ShowCHinese(72,0,4);//专
+				OLED_ShowCHinese(90,0,5);//业
+				//OLED_ShowCHinese(108,0,6);//技
+				
+				//OLED_ShowString(6,3,"0.96' OLED TEST",16);
+				OLED_ShowString(8,2," pan ke' Test ",16);  
+				OLED_ShowString(20,4,"2024/04/04",16);  
+				OLED_ShowString(0,6,"ASCII:",16);  
+				OLED_ShowString(63,6,"CODE:",16);  
+				OLED_ShowChar(48,6,t,16);    //显示ASCII字符	
+				
+				t++;    //将字符的ascll码往后移
+				if(t>'~')t=' ';
+				OLED_ShowNum(103,6,t,3,16);    //显示ASCII字符的码值 	
+		    //printf("ASCII：%c, Code = %d\r\n", t, t);    //通过串口1进行打印
 				
 				LED1_TOGGLE;
 				LED2_TOGGLE;

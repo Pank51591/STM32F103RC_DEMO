@@ -1,4 +1,7 @@
 SET PATH=D:\Program Files\Keil_v5\ARM\ARMCC\Bin;D:\Program Files (x86)\VMware\VMware Workstation\bin\;D:\Program Files\Python39\Scripts\;D:\Program Files\Python39\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\mingw64\bin;D:\Program Files\Git\cmd;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin;C:\Program Files (x86)\Arm GNU Toolchain arm-none-eabi\12.2 mpacbti-rel1\bin;C:\Renesas\10 2021.10\bin;C:\Users\ÅË¼ªÀ­±¦±´¶ù\AppData\Local\Microsoft\WindowsApps;D:\Program Files\JetBrains\CLion 2023.2.2\bin;;D:\Program Files\Microsoft VS Code\bin
+SET ARMCC5_ASMOPT=--diag_suppress=9931
+SET ARMCC5_CCOPT=--diag_suppress=9931
+SET ARMCC5_LINKOPT=--diag_suppress=9931
 SET CPU_TYPE=STM32F103RC
 SET CPU_VENDOR=STMicroelectronics
 SET UV2_TARGET=Target 1
