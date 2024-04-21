@@ -1,11 +1,14 @@
 #include "Display.h"
 #include "oled.h"
 #include "bmp.h"
+#include "stdio.h"
 
 extern uint8_t gcPage;
 extern uint8_t t;
 
 extern float humi,temp;
+extern char Humi[10];
+extern char Temp[10];
 
 
 void Display_Update (void)
@@ -68,7 +71,6 @@ void Disp_Page1(void)
 void Disp_Page2(void)
 {
 	
-	
 	OLED_DrawBMP(0,0,128,8,BMP1);  //图片显示(图片显示慎用，生成的字表较大，会占用较多空间，FLASH空间8K以下慎用)
 }
 
@@ -76,10 +78,12 @@ void Disp_Page2(void)
 void Disp_Page3(void)
 {
 	OLED_ShowString(20,2,"Temp: ",16);  
-	OLED_ShowNum(70,2,temp,3,16);    //显示ASCII字符的码值
+//	OLED_ShowNum(70,2,temp,3,16);    //显示ASCII字符的码值
+	OLED_ShowString2(63,2,Temp,16);
 	OLED_ShowChar(108,2,'C',16);
-	OLED_ShowString(20m,4,"Humi: ",16);
-	OLED_ShowNum(70,4,humi,3,16);
+	OLED_ShowString(20,4,"Humi: ",16);
+//	OLED_ShowNum(70,4,humi,3,16);
+	OLED_ShowString2(63,4,Humi,16);
 	OLED_ShowChar(108,4,'%',16);
 }
 

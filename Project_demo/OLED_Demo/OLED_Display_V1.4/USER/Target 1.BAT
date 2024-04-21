@@ -23,5 +23,5 @@ SET CPU_CLOCK=0x00B71B00
 "D:\Program Files\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via "..\obj\stm32f10x_rcc.__i"
 "D:\Program Files\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via "..\obj\stm32f10x_usart.__i"
 "D:\Program Files\Keil_v5\ARM\ARMCC\Bin\ArmCC" --Via "..\obj\stm32f10x_tim.__i"
-"D:\Program Files\Keil_v5\ARM\ARMCC\Bin\ArmLink" --Via "..\OBJ\OLED.lnp"
-"D:\Program Files\Keil_v5\ARM\ARMCC\Bin\fromelf.exe" "..\OBJ\OLED.axf" --i32combined --output "..\OBJ\OLED.hex"
+"D:\Program Files\Keil_v5\ARM\ARMCC\Bin\ArmLink" --Via "..\OBJ\demo.lnp"
+"D:\Program Files\Keil_v5\ARM\ARMCC\Bin\fromelf.exe" "..\OBJ\demo.axf" --i32combined --output "..\OBJ\demo.hex"

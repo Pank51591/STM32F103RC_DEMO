@@ -34,6 +34,8 @@ float humi,temp;
 DHT11_Data_TypeDef DHT11_Data;
 
 char cStr [ 100 ] = { 0 };
+char Humi[10];
+char Temp[10];
 
  int main(void)
  {
@@ -83,8 +85,10 @@ char cStr [ 100 ] = { 0 };
 				
 				if (DHT11_Read_TempAndHumidity ( & DHT11_Data ) == SUCCESS )         //读取 DHT11 温湿度信息
 				{
-					humi = (float)(DHT11_Data .humi_int * 100 + DHT11_Data .humi_deci)/(float)100;
-					temp = (float)(DHT11_Data .temp_int * 100 + DHT11_Data .temp_deci)/(float)100;
+					humi = (float)(DHT11_Data .humi_int + DHT11_Data .humi_deci * 0.1);
+					snprintf(Humi,6,"%.2f",humi);
+					temp = (float)(DHT11_Data .temp_int + DHT11_Data .temp_deci *0.1);
+					snprintf(Temp,6,"%.2f",temp);
 //					sprintf( cStr, "\r\n读取DHT11成功!\r\n\r\n湿度为%d.%d ％RH ，温度为 %d.%d℃ \r\n", 
 //									DHT11_Data .humi_int, DHT11_Data .humi_deci, DHT11_Data .temp_int, DHT11_Data.temp_deci );
 					printf("\r\n读取DHT11成功!\r\n\r\n湿度为%d.%d ％RH ，温度为 %d.%d℃ \r\n",DHT11_Data .humi_int, DHT11_Data .humi_deci, DHT11_Data .temp_int, DHT11_Data.temp_deci );
