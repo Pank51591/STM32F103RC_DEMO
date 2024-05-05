@@ -35,6 +35,11 @@ extern __IO uint16_t ADC_ConvertedValue;
 uint16_t ADC_ConvertedValueSum;
 uint16_t Average_Value;
 uint8_t gcADCCount;
+
+extern uint32_t TimeDisplay;
+extern uint32_t TimeAlarm;
+extern uint8_t gc10mscount;
+extern uint16_t gi1scount;
  
 void NMI_Handler(void)
 {
@@ -107,6 +112,16 @@ void  BASIC_TIM_IRQHandler (void)
 void SysTick_Handler(void)
 {
 		TimingDelay_Decrement();	
+	
+	 gc10mscount++;
+	 gi1scount++;
+
+	/*º∆ ±1s*/
+	if(gi1scount > 1000)
+	{
+		gi1scount = 0 ;
+		
+	}
 }
 #endif
 
@@ -143,6 +158,29 @@ void ADC_IRQHandler(void)
 	}
 }
 
+void RTC_IRQHandler(void)
+{
+	if (RTC_GetITStatus(RTC_IT_SEC) != RESET)
+	{
+		/* Clear the RTC Second interrupt */
+		RTC_ClearITPendingBit(RTC_IT_SEC);
+
+		/* Enable time update */
+		TimeDisplay = 1;
+		
+
+		/* Wait until last write operation on RTC registers has finished */
+		RTC_WaitForLastTask();
+	}
+	/*ƒ÷÷”*/
+	if (RTC_GetITStatus(RTC_IT_ALR) != RESET)
+	{
+		TimeAlarm  = 1 ;
+	}
+	
+	RTC_ClearITPendingBit(RTC_IT_ALR|RTC_IT_SEC);
+		
+}		
 
 /******************************************************************************/
 /*                 STM32F10x Peripherals Interrupt Handlers                   */
